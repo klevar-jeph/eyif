@@ -754,6 +754,58 @@
       <section class="grant-application-section" style="padding: 80px 0; background: #f9f9f9;">
         <div class="auto-container">
           
+          <!-- Countdown Timer -->
+          <div id="countdown-section" style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; margin-bottom: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+            <h2 style="color: #ffffff; font-size: 32px; font-weight: bold; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+              ⏰ Grant Registration Closes In
+            </h2>
+            <p style="color: #f0f0f0; font-size: 18px; margin-bottom: 30px; font-weight: 500;">
+              Portal closes at 12:00 AM, July 16, 2026
+            </p>
+            <div id="countdown-timer" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+              <div class="countdown-item" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 20px 30px; border-radius: 10px; min-width: 120px; border: 2px solid rgba(255,255,255,0.3);">
+                <div id="countdown-days" style="font-size: 48px; font-weight: bold; color: #ffc000; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">00</div>
+                <div style="color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Days</div>
+              </div>
+              <div class="countdown-item" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 20px 30px; border-radius: 10px; min-width: 120px; border: 2px solid rgba(255,255,255,0.3);">
+                <div id="countdown-hours" style="font-size: 48px; font-weight: bold; color: #ffc000; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">00</div>
+                <div style="color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Hours</div>
+              </div>
+              <div class="countdown-item" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 20px 30px; border-radius: 10px; min-width: 120px; border: 2px solid rgba(255,255,255,0.3);">
+                <div id="countdown-minutes" style="font-size: 48px; font-weight: bold; color: #ffc000; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">00</div>
+                <div style="color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Minutes</div>
+              </div>
+              <div class="countdown-item" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 20px 30px; border-radius: 10px; min-width: 120px; border: 2px solid rgba(255,255,255,0.3);">
+                <div id="countdown-seconds" style="font-size: 48px; font-weight: bold; color: #ffc000; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">00</div>
+                <div style="color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Seconds</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portal Closed Message (Hidden Initially) -->
+          <div id="portal-closed-message" style="display: none; padding: 80px 20px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 12px; text-align: center; margin-bottom: 50px;">
+            <div style="max-width: 700px; margin: 0 auto; padding: 50px 30px; background: rgba(255,255,255,0.95); border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+              <div style="font-size: 80px; margin-bottom: 20px;">🔒</div>
+              <h2 class="closed-title" style="font-size: 36px; font-weight: bold; margin-bottom: 20px; color: #dc2626; text-transform: uppercase; letter-spacing: 2px;">
+                Portal Closed
+              </h2>
+              <p class="closed-message" style="font-size: 18px; line-height: 1.8; color: #4b5563; margin-bottom: 15px;">
+                Thank you for your interest in the EYIF 2026 Grant Program.
+              </p>
+              <p class="closed-message" style="font-size: 16px; line-height: 1.6; color: #6b7280;">
+                The submission portal closed on <strong>July 16, 2026 at 12:00 AM</strong>.<br>
+                Applications are no longer being accepted for this cycle.
+              </p>
+              <div style="margin-top: 30px; padding: 20px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; text-align: left;">
+                <p style="margin: 0; color: #92400e; font-size: 15px;">
+                  <strong>📢 Stay Updated:</strong><br>
+                  Follow us on social media for announcements about the next grant cycle. 
+                  We encourage you to continue engaging with EYIF programs and workshops.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <!-- Tier Selection -->
           <div id="tier-selection">
             <div class="sec-title text-center" style="margin-bottom: 50px;">
@@ -825,7 +877,48 @@
       </section>
 
       <script>
+        // Countdown Timer - Portal closes at 12:00 AM July 16, 2026
+        const deadline = new Date('July 16, 2026 00:00:00').getTime();
+        
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = deadline - now;
+          
+          if (distance < 0) {
+            // Portal has closed
+            document.getElementById('countdown-section').style.display = 'none';
+            document.getElementById('portal-closed-message').style.display = 'block';
+            document.getElementById('tier-selection').style.display = 'none';
+            document.getElementById('application-forms').innerHTML = '';
+            return;
+          }
+          
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+          document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        
+        // Initial update
+        updateCountdown();
+        
         function selectTier(tier) {
+          // Check if portal is still open
+          const now = new Date().getTime();
+          if (now >= deadline) {
+            document.getElementById('portal-closed-message').style.display = 'block';
+            document.getElementById('tier-selection').style.display = 'none';
+            return;
+          }
+          
           document.getElementById('tier-selection').style.display = 'none';
           document.getElementById('application-forms').innerHTML = getFormHTML(tier);
           window.scrollTo({ top: 0, behavior: 'smooth' });
