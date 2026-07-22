@@ -357,3 +357,94 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* ============================================================
+   Exhibition Booth Floating Action Button
+   ============================================================ */
+.exhibition-fab {
+    position: fixed;
+    bottom: 115px;
+    right: 40px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 18px 0 0;
+    border-radius: 30px;
+    background: #ffc000;
+    color: #0a1a3a;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.35s ease, padding 0.35s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    width: 60px;
+    padding-right: 0;
+}
+
+.exhibition-fab:hover {
+    background: #ffd866;
+    box-shadow: 0 14px 34px rgba(255, 192, 0, 0.45);
+    transform: translateY(-3px);
+    width: 230px;
+    padding-right: 18px;
+}
+
+.exhibition-fab .fab-icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    transition: margin-right 0.35s ease;
+}
+
+.exhibition-fab:hover .fab-icon {
+    margin-right: 14px;
+}
+
+.exhibition-fab .fab-label {
+    opacity: 0;
+    transform: translateX(12px);
+    transition: opacity 0.3s ease 0.05s, transform 0.35s ease 0.05s;
+    pointer-events: none;
+}
+
+.exhibition-fab:hover .fab-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.exhibition-fab .fab-pulse {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 192, 0, 0.55);
+    z-index: -1;
+    animation: exhibition-fab-pulse 2.4s ease-out infinite;
+}
+
+@keyframes exhibition-fab-pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+    100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+}
+
+@media (max-width: 767px) {
+    .exhibition-fab {
+        bottom: 100px;
+        right: 40px;
+    }
+    .exhibition-fab:hover {
+        width: 200px;
+    }
+}

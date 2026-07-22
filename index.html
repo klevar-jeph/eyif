@@ -374,7 +374,7 @@
                   <li><a href="about.html">About</a></li>
                   <li><a href="grant-registration.html">Grants</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="contact.html">Exhibition</a></li>
                 </ul>
               </nav>
             </div>
@@ -1400,7 +1400,7 @@
 
   <!-- Exhibition Application Section -->
   <section id="exhibition-application-section" class="exhibition-application-section"
-    style="background: linear-gradient(135deg, #0a1a3a 0%, #142a52 55%, #1c3c6e 100%); padding: 90px 0; position: relative; overflow: hidden;">
+    style="background: linear-gradient(135deg, #0a1a3a 0%, #142a52 55%, #1c3c6e 100%); padding: 90px 0; position: relative; overflow: hidden; scroll-margin-top: 100px;">
     <div style="position: absolute; top: -120px; right: -120px; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(255,192,0,0.12) 0%, rgba(255,192,0,0) 70%);"></div>
     <div style="position: absolute; bottom: -140px; left: -100px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(52,89,149,0.25) 0%, rgba(52,89,149,0) 70%);"></div>
     <div style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(255,192,0,0.25) 50%, transparent 100%);"></div>
@@ -1427,6 +1427,9 @@
               <span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 50px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #c9d4ee; font-size: 13px; font-weight: 600; letter-spacing: 0.3px;">
                 Limited Slots Available
               </span>
+              <a href="contact.html" class="theme-btn btn-style-one bg-yellow" style="margin-top: 10px;">
+                <span class="btn-title">Apply For Exhibition Booth</span>
+              </a>
             </div>
           </div>
         </div>
@@ -1435,7 +1438,7 @@
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 44px 38px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 30px 60px rgba(0,0,0,0.35);">
             <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #ffc000; margin-bottom: 6px;">Apply To Exhibit</div>
-            <h3 style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0 0 10px;">Reach Out &amp; Reserve Your Booth</h3>
+            <h3 style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0 0 10px;">Reach Out & Reserve Your Booth</h3>
             <p style="color: #b8c4e0; font-size: 14px; line-height: 1.6; margin: 0 0 30px;">
               Contact us through either channel below &mdash; our team will respond with the
               exhibition application details and guide you through every next step.
@@ -1627,7 +1630,7 @@
                     <i class="fa fa-angle-double-right"></i><a href="grant-registration.html">Grant</a>
                   </li>
                   <li>
-                    <i class="fa fa-angle-double-right"></i><a href="contact.html">Contact</a>
+                    <i class="fa fa-angle-double-right"></i><a href="contact.html">Exhibition</a>
                   </li>
                 </ul>
               </div>
@@ -1770,6 +1773,23 @@
       document.head.appendChild(style);
     });
   </script>
+
+  <!-- Exhibition Booth Floating Action Button -->
+  <a href="#exhibition-application-section" class="exhibition-fab" aria-label="Exhibition Booth">
+    <span class="fab-pulse"></span>
+    <span class="fab-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a1a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="m2 7 4.5-4.5a1 1 0 0 1 .7-.3h9.6a1 1 0 0 1 .7.3L22 7"></path>
+        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+        <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"></path>
+        <path d="M2 7h20"></path>
+        <path d="M3 11h3"></path>
+        <path d="M18 11h3"></path>
+      </svg>
+    </span>
+    <span class="fab-label">Exhibition Booth</span>
+  </a>
+  <!-- End Exhibition FAB -->
 </body>
 
 </html>
