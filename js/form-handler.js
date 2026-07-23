@@ -189,8 +189,8 @@ function clearFormFeedback(form) {
 function getSuccessMessage(endpoint, serverMessage) {
   if (serverMessage) return serverMessage;
   switch (endpoint) {
-    case "/contact":
-      return "Thank you for your message! We'll contact you soon.";
+    case "/exhibition":
+      return "Thank you for your exhibition inquiry! We'll contact you soon.";
     case "/grant-registration":
       return "Your grant application has been submitted successfully! We'll review it and get back to you.";
     case "/subscribe":
@@ -352,7 +352,7 @@ function initContactForm() {
       return;
     }
 
-    submitForm(form, "/contact", {
+    submitForm(form, "/exhibition", {
       firstName: firstName,
       lastName: lastName,
       email: email,
