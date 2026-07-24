@@ -3368,6 +3368,11 @@ Scroll To Top style
   font-weight: 600;
   color: var(--theme-color-light);
 }
+@media (min-width: 1200px) {
+  .header-style-one .main-box .nav-outer .navigation > li > a {
+    font-size: 14px;
+  }
+}
 @media (max-width: 1199.98px) {
   .header-style-one .main-box .nav-outer .navigation > li > a {
     font-size: 15px;
@@ -22550,6 +22555,11 @@ Scroll To Top style
 .header-style-one .main-box .nav-outer .navigation > li > a {
   font-weight: 600;
   color: var(--theme-color-light);
+}
+@media (min-width: 1200px) {
+  .header-style-one .main-box .nav-outer .navigation > li > a {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1199.98px) {
   .header-style-one .main-box .nav-outer .navigation > li > a {
