@@ -1746,7 +1746,7 @@
             if (filter === 'all') {
               speaker.style.display = 'block';
             } else {
-              if (category === filter) {
+              if (category.split(' ').includes(filter)) {
                 speaker.style.display = 'block';
               } else {
                 speaker.style.display = 'none';
