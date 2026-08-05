@@ -1,5 +1,6 @@
 // Base URL for API endpoints
 const BASE_URL = "https://eyif-server-vuqh.onrender.com";
+// const BASE_URL = "http://localhost:4500"
 
 // ─── Utility Functions ───────────────────────────────────────────────
 
@@ -203,6 +204,8 @@ function getSuccessMessage(endpoint, serverMessage) {
       return "Your Build Track application has been submitted successfully! We'll review it and get back to you.";
     case "/apply/scale":
       return "Your Scale Track application has been submitted successfully! We'll review it and get back to you.";
+    case "/masterclass-registration":
+      return "Your masterclass registration has been submitted successfully! Check your email for your confirmation ticket.";
     default:
       return "Form submitted successfully!";
   }
@@ -544,6 +547,43 @@ function submitApplication(event, tier) {
   submitForm(form, endpoint, data);
 }
 
+// ─── Masterclass Registration ───────────────────────────────────────
+
+function initMasterclassForm() {
+  var form = document.getElementById("masterclass-registration-form");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var fullName = (form.querySelector('[name="full_name"]') || {}).value;
+    var email = (form.querySelector('[name="email"]') || {}).value;
+    var masterclass = (form.querySelector('[name="masterclass"]') || {}).value;
+
+    fullName = fullName ? fullName.trim() : "";
+    email = email ? email.trim() : "";
+    masterclass = masterclass ? masterclass.trim() : "";
+
+    var errors = [];
+    if (!fullName) errors.push("Full name is required");
+    if (!email) errors.push("Email is required");
+    else if (!isValidEmail(email)) errors.push("Please enter a valid email address");
+    if (!masterclass) errors.push("Please select a masterclass");
+
+    if (errors.length) {
+      showFormFeedback(form, errors.join(". "), "error");
+      showToast(errors[0], "error");
+      return;
+    }
+
+    submitForm(form, "/masterclass-registration", {
+      fullName: fullName,
+      email: email,
+      masterclass: masterclass,
+    });
+  });
+}
+
 // ─── Initialization ──────────────────────────────────────────────────
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -551,6 +591,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initGrantRegistrationForm();
   initNewsletterForms();
   initSeatReservationForm();
+  initMasterclassForm();
 
   // Inject feedback, spinner & toast styles
   var style = document.createElement("style");

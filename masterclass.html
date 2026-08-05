@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="Register for a masterclass at EYIF 2026 — choose from five breakout sessions on AI, creative economy, skill stacking, storytelling, and social enterprise." />
+  <meta name="keywords" content="masterclass, registration, EYIF 2026, breakout sessions, youth empowerment, Edo" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="EYIF 2026 | Masterclass Registration" />
+  <meta property="og:description" content="Choose one of five masterclasses at the Edo Youth Impact Forum 2026 and secure your spot." />
+  <meta property="og:image" content="images/updates/IMG-20250703-WA0111.jpg" />
+  <meta property="og:url" content="https://edoyouthimpactforum.com/masterclass.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Edo Youth Impact Forum" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EYIF 2026 | Masterclass Registration" />
+  <meta name="twitter:description" content="Choose one of five masterclasses at the Edo Youth Impact Forum 2026 and secure your spot." />
+  <meta name="twitter:image" content="images/updates/IMG-20250703-WA0111.jpg" />
+
+  <!-- Page Title -->
+  <title>EYIF 2026 | Masterclass Registration</title>
+  <!-- Favicon Icon -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  <!-- Stylesheets -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/master.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <!--Color Switcher Mockup-->
+  <link href="css/color-switcher-design.css" rel="stylesheet" />
+  <!-- Professional Conference Colors -->
+  <link href="css/conference-colors.css" rel="stylesheet" />
+
+  <style>
+    h2.text-reveal-anim {
+      color: #111 !important;
+      -webkit-text-fill-color: #111 !important;
+      background: none !important;
+      background-clip: initial !important;
+      -webkit-background-clip: initial !important;
+      text-shadow: none !important;
+    }
+
+    /* ── Footer layout (matches homepage footer-style-one) ── */
+    .footer-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 0 0 auto;
+    }
+
+    .footer-column:nth-child(1) {
+      width: 35%;
+    }
+
+    .footer-column:nth-child(2) {
+      width: 25%;
+    }
+
+    .footer-column:nth-child(3) {
+      width: 35%;
+    }
+
+    @media (max-width: 991px) {
+
+      .footer-column:nth-child(1),
+      .footer-column:nth-child(2),
+      .footer-column:nth-child(3) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    /* ── Page Title centering ── */
+    .page-title .inner-container {
+      text-align: center;
+      padding-left: 0;
+    }
+
+    /* ── Masterclass Overview Cards ── */
+    .mc-card {
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 14px;
+      padding: 28px 26px;
+      height: 100%;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mc-card:hover {
+      border-color: #ffc000;
+      box-shadow: 0 12px 40px rgba(255, 192, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .mc-card .mc-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1a4d8c, #345995);
+      color: #fff;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .mc-card .mc-title {
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: #13293d;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .mc-card .mc-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    .mc-card .mc-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #ffc000;
+      color: #13293d;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-bottom-left-radius: 12px;
+    }
+
+    /* ── Registration Form ── */
+    .mc-form-section {
+      background: linear-gradient(135deg, #0a1a3a 0%, #142a52 55%, #1c3c6e 100%);
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mc-form-section .glow-one {
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 192, 0, 0.12) 0%, rgba(255, 192, 0, 0) 70%);
+    }
+
+    .mc-form-section .glow-two {
+      position: absolute;
+      bottom: -140px;
+      left: -100px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(52, 89, 149, 0.25) 0%, rgba(52, 89, 149, 0) 70%);
+    }
+
+    .mc-form-wrap {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 20px;
+      padding: 50px 44px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      position: relative;
+      z-index: 2;
+    }
+
+    .mc-form-wrap .form-control {
+      border: 2px solid #e1e5e9;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 15px;
+      color: #111;
+      background: #fff;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .mc-form-wrap .form-control:focus {
+      border-color: #ffc000;
+      box-shadow: 0 0 0 4px rgba(255, 192, 0, 0.12);
+      outline: none;
+    }
+
+    .mc-form-wrap .form-control::placeholder {
+      color: #999;
+    }
+
+    .mc-form-wrap select.form-control {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2313293d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+
+    .mc-form-wrap label {
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #13293d;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .mc-form-wrap .info-strip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 192, 0, 0.1);
+      border: 1px solid rgba(255, 192, 0, 0.3);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 30px;
+    }
+
+    .mc-form-wrap .info-strip i {
+      color: #ffc000;
+      font-size: 20px;
+    }
+
+    .mc-form-wrap .info-strip span {
+      font-size: 14px;
+      color: #13293d;
+      font-weight: 600;
+    }
+
+    /* ── "Don't know which to join?" Section ── */
+    .mc-guide-section {
+      background: #f9f9f9;
+      padding: 80px 0;
+    }
+
+    .mc-guide-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 32px 28px;
+      border-left: 5px solid #ffc000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .mc-guide-card:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .mc-guide-card .mc-guide-label {
+      display: inline-block;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #1a4d8c;
+      background: rgba(26, 77, 140, 0.08);
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .mc-guide-card h4 {
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #13293d;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .mc-guide-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .mc-guide-card .mc-ideal-for {
+      font-size: 13px;
+      color: #1a4d8c;
+      font-weight: 600;
+    }
+
+    .mc-guide-card .mc-ideal-for i {
+      margin-right: 6px;
+      color: #ffc000;
+    }
+
+    @media (max-width: 767px) {
+      .mc-form-wrap {
+        padding: 35px 24px;
+      }
+
+      .page-title .title {
+        font-size: 28px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader" style="display:none"></div>
+
+    <!-- Main Header-->
+    <header class="main-header header-style-one inner-page-header">
+      <div class="auto-container">
+        <div class="main-box">
+          <!-- Logo Box -->
+          <div class="logo-box">
+            <div class="logo">
+              <a href="index.html"><img src="images/logo.png" alt="Logo" title="EYIF" /></a>
+            </div>
+          </div>
+
+          <!-- Header Navbar -->
+          <div class="header-navbar">
+            <!--Nav Box-->
+            <div class="nav-outer">
+              <nav class="nav main-menu">
+                <ul class="navigation">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="grant-registration.html">Grants</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="exhibition.html">Exhibition</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Outer Box -->
+            <div class="outer-box">
+              <!-- Hidden Bar -->
+              <button class="ui-btn toggle-hidden-bar">
+                <i class="icon flaticon-menu-2"></i>
+              </button>
+
+              <!-- Btn Box -->
+              <div class="btn-box">
+                <a href="grant-registration.html" class="theme-btn btn-style-one light-bg"><span
+                    class="btn-title">Register Now</span></a>
+              </div>
+
+              <!-- Mobile Nav toggler -->
+              <div class="mobile-nav-toggler"><i class="fa fa-bars"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        <nav class="menu-box">
+          <div class="upper-box">
+            <div class="logo-box">
+              <div class="nav-logo light">
+                <a href="index.html"><img src="images/logo-2.png" alt="Logo" /></a>
+              </div>
+              <div class="nav-logo dark">
+                <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+              </div>
+            </div>
+            <div class="close-btn"><i class="icon fa fa-times"></i></div>
+          </div>
+
+          <ul class="navigation clearfix">
+            <!--Keep This Empty / Menu will come through Javascript-->
+          </ul>
+          <ul class="contact-list-one">
+            <li>
+              <i class="icon lnr-icon-phone-handset"></i>
+              <span class="title">Call Us</span>
+              <div class="text">
+                <a href="tel:+2348153732506">+234 815 373 2506</a>
+              </div>
+            </li>
+            <li>
+              <i class="icon lnr-icon-envelope1"></i>
+              <span class="title">Send Email</span>
+              <div class="text">
+                <a href="mailto:info@edoyouthimpactforum.com">info@edoyouthimpactforum.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="icon lnr-icon-map-marker"></i>
+              <span class="title">Address</span>
+              <div class="text">Victor Uwaifo Creative Hub, Benin City, Edo State</div>
+            </li>
+          </ul>
+
+          <ul class="social-links">
+            <li>
+              <a href="https://x.com/edoyif?t=G2teLxeB8QG3la5JNJXrLw&s=09"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/edoyif?igsh=M2cwOHh4c295cnpt"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Header Search -->
+      <div class="search-popup">
+        <span class="search-back-drop"></span>
+        <button class="close-search">
+          <span class="fa fa-times"></span>
+        </button>
+
+        <div class="search-inner">
+          <form method="post" action="#">
+            <div class="form-group">
+              <input type="search" name="search-field" value="" placeholder="Search..." required="" />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- End Header Search -->
+
+      <!-- Sticky Header  -->
+      <div class="sticky-header">
+        <div class="auto-container">
+          <div class="inner-container">
+            <!--Logo-->
+            <div class="logo-box">
+              <div class="logo light">
+                <a href="index.html" title=""><img src="images/logo-2.png" alt="Logo" /></a>
+              </div>
+              <div class="logo dark">
+                <a href="index.html" title=""><img src="images/logo.png" alt="Logo" /></a>
+              </div>
+            </div>
+
+            <!--Right Col-->
+            <div class="nav-outer">
+              <!-- Main Menu -->
+              <nav class="main-menu">
+                <div class="navbar-collapse show collapse clearfix">
+                  <ul class="navigation clearfix">
+                    <!--Keep This Empty / Menu will come through Javascript-->
+                  </ul>
+                </div>
+              </nav>
+              <!-- Main Menu End-->
+
+              <!--Mobile Navigation Toggler-->
+              <div class="mobile-nav-toggler">
+                <span class="icon lnr-icon-bars"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Sticky Menu -->
+    </header>
+    <!--End Main Header -->
+
+    <!-- Hidden bar back drop -->
+    <div class="hidden-bar-back-drop"></div>
+
+    <!-- Hidden Bar -->
+    <section class="hidden-bar">
+      <div class="inner-box">
+        <div class="upper-box">
+          <div class="logo-box">
+            <div class="nav-logo light">
+              <a href="index.html"><img src="images/logo-2.png" alt="Logo" /></a>
+            </div>
+            <div class="nav-logo dark">
+              <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+            </div>
+          </div>
+          <div class="close-btn"><i class="icon fa fa-times"></i></div>
+        </div>
+
+        <div class="text-box">
+          <h4 class="title">Empowering Youth for a Transformed Future</h4>
+          <div class="text">
+            The Edo Youth Impact Forum (EYIF) is designed to inspire and equip
+            young people with practical skills, entrepreneurial thinking, and
+            civic awareness. Join us to be part of this transformative
+            movement.
+          </div>
+        </div>
+
+        <ul class="contact-list-one">
+          <li>
+            <i class="icon lnr-icon-phone-handset"></i>
+            <span class="title">Call Us</span>
+            <div class="text">
+              <a href="tel:+2348153732506">+234 815 373 2506</a>
+            </div>
+          </li>
+          <li>
+            <i class="icon lnr-icon-envelope1"></i>
+            <span class="title">Send Email</span>
+            <div class="text">
+              <a href="mailto:info@edoyouthimpactforum.com">info@edoyouthimpactforum.com</a>
+            </div>
+          </li>
+          <li>
+            <i class="icon lnr-icon-map-marker"></i>
+            <span class="title">Address</span>
+            <div class="text">
+              Victor Uwaifo Creative Hub, <br />
+              Benin City, Edo State.
+            </div>
+          </li>
+        </ul>
+
+        <ul class="social-links">
+          <li>
+            <a href="https://x.com/edoyif?t=G2teLxeB8QG3la5JNJXrLw&s=09"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/edoyif?igsh=M2cwOHh4c295cnpt"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--End Hidden Bar -->
+
+    <!-- Page Title -->
+    <section class="page-title" style="background-image: url(images/background/mc-registration.jpg); background-position: center center;">
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.62);z-index:0;"></div>
+      <div class="auto-container" style="position:relative;z-index:1;">
+        <div class="inner-container">
+          <h1 class="title" style="text-align:center;">Masterclass Registration</h1>
+          <div style="text-align:center;margin-top:18px;">
+            <span style="display:inline-block;color:#ffc000;font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;">9:00 AM &ndash; 10:50 AM &nbsp;|&nbsp; Breakout Sessions &nbsp;|&nbsp; Choose One</span>
+          </div>
+          <div style="text-align:center;margin-top:12px;">
+            <a href="#mc-form-section" class="theme-btn btn-style-one bg-yellow" style="color:#111;">
+              <span class="btn-title" style="color:#111;">Register Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Page Title -->
+
+    <!-- Masterclass Overview Section -->
+    <section style="background:#ffffff;padding:80px 0 60px;">
+      <div class="auto-container">
+        <div class="sec-title text-center" style="margin-bottom:50px;">
+          <span class="sub-title">Five Masterclasses &mdash; Pick One</span>
+          <h2 class="text-reveal-anim">Choose Your Breakout Session</h2>
+          <div class="text" style="max-width:720px;margin:0 auto;color:#666;">
+            All five masterclasses run simultaneously from 9:00 AM to 10:50 AM,
+            so each delegate may attend only one. Read the summaries below to
+            find the session that best matches your goals and interests.
+          </div>
+        </div>
+
+        <div class="row" style="gap:24px 0;">
+          <!-- MC 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+            <div class="mc-card">
+              <span class="mc-badge">MC 1</span>
+              <div class="mc-number">01</div>
+              <div class="mc-title">AI for Small Businesses: Automation</div>
+              <p class="mc-desc">
+                A hands-on intro to using AI tools for customer support, content
+                creation, marketing, and scheduling &mdash; no technical background
+                needed. Walk away with a shortlist of free tools and a framework for
+                automating your biggest time-sinks.
+              </p>
+              <div class="mc-ideal-for" style="margin-top:14px;font-size:13px;color:#1a4d8c;font-weight:600;">
+                <i class="fa fa-check-circle" style="margin-right:6px;color:#ffc000;"></i>Ideal for: small business owners, startups &amp; freelancers.
+              </div>
+            </div>
+          </div>
+
+          <!-- MC 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="100ms">
+            <div class="mc-card">
+              <span class="mc-badge">MC 2</span>
+              <div class="mc-number">02</div>
+              <div class="mc-title">From Idea to Brand: Creative Economy Business Models for Edo Creatives</div>
+              <p class="mc-desc">
+                Built for Edo State's creatives &mdash; learn how to move from a raw
+                idea to a recognisable, income-generating brand. Explore real
+                business models from productised services to licensing, and learn
+                how to price and position your work.
+              </p>
+              <div class="mc-ideal-for" style="margin-top:14px;font-size:13px;color:#1a4d8c;font-weight:600;">
+                <i class="fa fa-check-circle" style="margin-right:6px;color:#ffc000;"></i>Ideal for: designers, content creators, musicians &amp; artists.
+              </div>
+            </div>
+          </div>
+
+          <!-- MC 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
+            <div class="mc-card">
+              <span class="mc-badge">MC 3</span>
+              <div class="mc-number">03</div>
+              <div class="mc-title">Skill Stacking: How to Turn One Skill Into Seven Income Streams</div>
+              <p class="mc-desc">
+                Discover how a single skill &mdash; writing, design, or coding &mdash;
+                can be repackaged into consulting, teaching, products, licensing, and
+                content. Leave with a personalised skill-stacking map for your
+                current skill set.
+              </p>
+              <div class="mc-ideal-for" style="margin-top:14px;font-size:13px;color:#1a4d8c;font-weight:600;">
+                <i class="fa fa-check-circle" style="margin-right:6px;color:#ffc000;"></i>Ideal for: freelancers, young professionals &amp; side-hustlers.
+              </div>
+            </div>
+          </div>
+
+          <!-- MC 4 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+            <div class="mc-card">
+              <span class="mc-badge">MC 4</span>
+              <div class="mc-number">04</div>
+              <div class="mc-title">Storytelling as Strategy: Using Film, Music &amp; Art to Build Economic Power</div>
+              <p class="mc-desc">
+                Learn how storytellers across film, music, and visual art can use
+                narrative as a deliberate strategy to build audiences, attract
+                funding, and create lasting economic value. Includes case studies
+                and a repeatable storytelling framework.
+              </p>
+              <div class="mc-ideal-for" style="margin-top:14px;font-size:13px;color:#1a4d8c;font-weight:600;">
+                <i class="fa fa-check-circle" style="margin-right:6px;color:#ffc000;"></i>Ideal for: filmmakers, musicians, artists &amp; content creators.
+              </div>
+            </div>
+          </div>
+
+          <!-- MC 5 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+            <div class="mc-card">
+              <span class="mc-badge">MC 5</span>
+              <div class="mc-number">05</div>
+              <div class="mc-title">Social Enterprise &amp; Measuring Impact: Building Ventures That Prove Their Worth</div>
+              <p class="mc-desc">
+                Build a venture that is both financially sustainable and socially
+                impactful. Learn practical tools for impact measurement, how to
+                build an impact framework, and how to tell your story with data
+                that funders trust.
+              </p>
+              <div class="mc-ideal-for" style="margin-top:14px;font-size:13px;color:#1a4d8c;font-weight:600;">
+                <i class="fa fa-check-circle" style="margin-right:6px;color:#ffc000;"></i>Ideal for: social entrepreneurs, nonprofit leaders &amp; changemakers.
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Card -->
+          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="500ms">
+            <div style="background:linear-gradient(135deg,#1a4d8c,#345995);border-radius:14px;padding:28px 26px;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+              <i class="fa fa-ticket" style="font-size:36px;color:#ffc000;margin-bottom:14px;"></i>
+              <h4 style="color:#fff;font-family:'Instrument Sans',sans-serif;font-size:18px;font-weight:700;margin-bottom:10px;">Ready to Secure Your Spot?</h4>
+              <p style="color:rgba(255,255,255,0.85);font-size:14px;margin-bottom:18px;">Still can't decide? Pick the session that matches what you're working on right now &mdash; then register below.</p>
+              <a href="#mc-form-section" class="theme-btn btn-style-one bg-yellow" style="color:#111;">
+                <span class="btn-title" style="color:#111;">Register Now</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Masterclass Overview Section -->
+
+    <!-- Registration Form Section -->
+    <section id="mc-form-section" class="mc-form-section" style="scroll-margin-top:100px;">
+      <div class="glow-one"></div>
+      <div class="glow-two"></div>
+      <div class="auto-container" style="position:relative;z-index:2;">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-md-10 col-sm-12">
+            <div class="sec-title light text-center" style="margin-bottom:35px;">
+              <span class="sub-title" style="color:#ffc000 !important;">Secure Your Seat</span>
+              <h2 class="text-reveal-anim" style="color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;font-size:36px;">
+                Masterclass Registration Form
+              </h2>
+              <div class="text" style="color:#d6def0 !important;">
+                Fill in your details and select the masterclass you'd like to attend.
+                You'll receive a confirmation email that serves as your ticket.
+              </div>
+            </div>
+
+            <div class="mc-form-wrap">
+              <div class="info-strip">
+                <i class="fa fa-clock"></i>
+                <span>All sessions: 9:00 AM &ndash; 10:50 AM | One masterclass per delegate</span>
+              </div>
+
+              <form id="masterclass-registration-form" autocomplete="off">
+                <div class="form-group" style="margin-bottom:20px;">
+                  <label for="mc-full-name">Full Name</label>
+                  <input type="text" id="mc-full-name" name="full_name" class="form-control"
+                    placeholder="Enter your full name" required />
+                </div>
+
+                <div class="form-group" style="margin-bottom:20px;">
+                  <label for="mc-email">Email Address</label>
+                  <input type="email" id="mc-email" name="email" class="form-control"
+                    placeholder="Enter your email address" required />
+                </div>
+
+                <div class="form-group" style="margin-bottom:28px;">
+                  <label for="mc-select">Select Your Masterclass</label>
+                  <select id="mc-select" name="masterclass" class="form-control" required>
+                    <option value="" disabled selected>&mdash; Choose a masterclass &mdash;</option>
+                    <option value="MC 1: AI for Small Businesses: Automation">MC 1 &mdash; AI for Small Businesses: Automation</option>
+                    <option value="MC 2: From Idea to Brand: Creative Economy Business Models for Edo Creatives">MC 2 &mdash; From Idea to Brand: Creative Economy Business Models for Edo Creatives</option>
+                    <option value="MC 3: Skill Stacking: How to Turn One Skill Into Seven Income Streams">MC 3 &mdash; Skill Stacking: How to Turn One Skill Into Seven Income Streams</option>
+                    <option value="MC 4: Storytelling as Strategy: Using Film, Music & Art to Build Economic Power">MC 4 &mdash; Storytelling as Strategy: Using Film, Music &amp; Art to Build Economic Power</option>
+                    <option value="MC 5: Social Enterprise & Measuring Impact: Building Ventures That Prove Their Worth">MC 5 &mdash; Social Enterprise &amp; Measuring Impact: Building Ventures That Prove Their Worth</option>
+                  </select>
+                </div>
+
+                <div class="form-group text-center">
+                  <button type="submit" class="theme-btn btn-style-one bg-yellow" style="color:#111;width:100%;padding:14px;">
+                    <span class="btn-title" style="color:#111;">Register for Masterclass</span>
+                  </button>
+                </div>
+
+                <div class="form-message text-center" style="margin-top:18px;display:none;"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Registration Form Section -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer footer-style-one">
+      <div class="bg bg-image" style="background-image: url(images/background/3.jpg)"></div>
+      <div class="shape-eleven bounce-y"></div>
+      <div class="shape-twelve bounce-y"></div>
+
+      <!-- Widgets Section -->
+      <div class="widgets-section">
+        <div class="auto-container">
+          <div class="footer-flex">
+            <!-- Footer Column -->
+            <div class="footer-column">
+              <div class="footer-widget about-widget">
+                <div class="widget-content">
+                  <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+                  </div>
+                  <div class="text">
+                    The Edo Youth Impact Forum (EYIF) is a platform designed
+                    to inspire, equip, and empower young people with practical
+                    skills, entrepreneurial thinking, and civic awareness for
+                    a transformed future.
+                  </div>
+                  <ul class="social-icon-one">
+                    <li>
+                      <a href="https://x.com/edoyif?t=G2teLxeB8QG3la5JNJXrLw&s=09"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/edoyif?igsh=M2cwOHh4c295cnpt"><i
+                          class="fab fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Column -->
+            <div class="footer-column">
+              <div class="footer-widget links-widget">
+                <h3 class="widget-title">Quick Links</h3>
+                <div class="widget-content">
+                  <ul class="user-links">
+                    <li>
+                      <i class="fa fa-angle-double-right"></i><a href="index.html">Home</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-right"></i><a href="about.html">About EYIF</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-right"></i><a href="grant-registration.html">Grant</a>
+                    </li>
+                    <li>
+                      <i class="fa fa-angle-double-right"></i><a href="exhibition.html">Exhibition</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Column -->
+            <div class="footer-column">
+              <div class="footer-widget contact-widget">
+                <h3 class="widget-title">Contact Info</h3>
+                <div class="widget-content">
+                  <ul class="contact-list-two light">
+                    <li>
+                      <i class="fa fa-envelope"></i>
+                      <a href="mailto:info@edoyouthimpactforum.com">info@edoyouthimpactforum.com</a>
+                    </li>
+                    <li>
+                      <i class="icon lnr-icon-phone-handset"></i>
+                      <span class="title">Call Us</span>
+                      <div class="text">
+                        <a href="tel:+2348153732506">+234 815 373 2506</a>
+                      </div>
+                    </li>
+                    <li>
+                      <i class="fa fa-location-dot"></i>
+                      <span style="margin-left: 10px;">
+                        Victor Uwaifo Creative Hub,<br>
+                        Benin City, Edo State.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="auto-container">
+          <div class="inner-container">
+            <div class="copyright-text">
+              &copy; Copyright 2026 EYIF. All Rights Reserved. | <a href="privacy-policy.html"
+                style="color: #ffc000; text-decoration: none;">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--End Main Footer -->
+  </div>
+  <!-- End Page Wrapper -->
+
+  <!-- Back To Top Start -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- back to top end -->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery.countdown.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/appear.js"></script>
+  <script src="js/lightcase.js"></script>
+  <script src="js/swipper.min.js"></script>
+  <script src="js/backtotop.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/splitType.js"></script>
+  <script src="js/SplitText.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- Form Handler -->
+  <script src="js/form-handler.js"></script>
+  <!-- Color Setting -->
+  <script src="js/color-settings.js"></script>
+
+  <!-- Exhibition Booth Floating Action Button -->
+  <a href="index.html#exhibition-application-section" class="exhibition-fab" aria-label="Exhibition Booth">
+    <span class="fab-pulse"></span>
+    <span class="fab-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a1a3a"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="m2 7 4.5-4.5a1 1 0 0 1 .7-.3h9.6a1 1 0 0 1 .7.3L22 7"></path>
+        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+        <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"></path>
+        <path d="M2 7h20"></path>
+        <path d="M3 11h3"></path>
+        <path d="M18 11h3"></path>
+      </svg>
+    </span>
+    <span class="fab-label">Exhibition Booth</span>
+  </a>
+</body>
+
+</html>
