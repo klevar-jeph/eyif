@@ -148,6 +148,21 @@
       border-bottom-left-radius: 12px;
     }
 
+    .mc-card .mc-day-badge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #1a4d8c;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-bottom-right-radius: 12px;
+      z-index: 2;
+    }
+
     .mc-card .mc-speaker {
       display: flex;
       align-items: center;
@@ -644,9 +659,15 @@
           <span class="sub-title">Six Masterclasses &mdash; Pick One</span>
           <h2 class="text-reveal-anim">Choose Your Breakout Session</h2>
           <div class="text" style="max-width:720px;margin:0 auto;color:#666;">
-            All six masterclasses run simultaneously on <strong>Day 1 &mdash; Tuesday 18th August 2026 (Ideas &amp; Capital)</strong>
-            from 9:00 AM to 10:50 AM, so each delegate may attend only one. Read the summaries below to
-            find the session that best matches your goals and interests.
+            Masterclasses run across Day 1 and Day 2 of the forum, all from
+            9:00 AM to 10:50 AM. Each delegate may attend only one &mdash; read
+            the summaries below to find the session that best matches your
+            goals and interests.
+          </div>
+          <div style="margin:20px auto 0;text-align:center;">
+            <span style="display:inline-flex;align-items:center;gap:8px;background:#f4f6f9;border:1px solid #e2e8f0;color:#1a4d8c;font-family:'Instrument Sans',sans-serif;font-size:14px;font-weight:600;padding:9px 20px;border-radius:30px;">
+              <i class="fa fa-calendar-alt" style="color:#ffc000;"></i> Tue 18 Aug 2026 &middot; 9:00 AM &ndash; 10:50 AM
+            </span>
           </div>
         </div>
 
@@ -655,6 +676,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
             <div class="mc-card">
               <span class="mc-badge">MC 1</span>
+              <span class="mc-day-badge">Day 1</span>
               <div class="mc-number">01</div>
               <div class="mc-title">AI for Small Businesses: Automation</div>
               <p class="mc-desc">
@@ -681,6 +703,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="100ms">
             <div class="mc-card">
               <span class="mc-badge">MC 2</span>
+              <span class="mc-day-badge">Day 1</span>
               <div class="mc-number">02</div>
               <div class="mc-title">From Idea to Brand: Creative Economy Business Models for Edo Creatives</div>
               <p class="mc-desc">
@@ -707,6 +730,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
             <div class="mc-card">
               <span class="mc-badge">MC 3</span>
+              <span class="mc-day-badge">Day 1</span>
               <div class="mc-number">03</div>
               <div class="mc-title">Skill Stacking: How to Turn One Skill Into Seven Income Streams</div>
               <p class="mc-desc">
@@ -733,6 +757,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
             <div class="mc-card">
               <span class="mc-badge">MC 4</span>
+              <span class="mc-day-badge">Day 1</span>
               <div class="mc-number">04</div>
               <div class="mc-title">Storytelling as Strategy: Using Film, Music &amp; Art to Build Economic Power</div>
               <p class="mc-desc">
@@ -759,6 +784,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
             <div class="mc-card">
               <span class="mc-badge">MC 5</span>
+              <span class="mc-day-badge">Day 1</span>
               <div class="mc-number">05</div>
               <div class="mc-title">Social Enterprise &amp; Measuring Impact: Building Ventures That Prove Their Worth</div>
               <p class="mc-desc">
@@ -785,6 +811,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="500ms">
             <div class="mc-card">
               <span class="mc-badge">MC 6</span>
+              <span class="mc-day-badge">Day 2</span>
               <div class="mc-number">06</div>
               <div class="mc-title">Raising Capital in Nigeria: Grants, Angels &amp; What Funders Actually Want</div>
               <p class="mc-desc">
@@ -844,8 +871,8 @@
 
             <div class="mc-form-wrap">
               <div class="info-strip">
-                <i class="fa fa-clock"></i>
-                <span>Day 1 &middot; Tue 18 Aug 2026 &middot; 9:00 AM &ndash; 10:50 AM | One masterclass per delegate</span>
+                <i class="fa fa-info-circle"></i>
+                <span>Limited seats available &mdash; register early to secure your spot.</span>
               </div>
 
               <form id="masterclass-registration-form" autocomplete="off">
